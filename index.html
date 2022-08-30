@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="font/OpenSansBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/OpenSansItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/OpenSansRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/OpenSansSemibold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/checkboxes.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/style_accardion.css">
+  <link rel="stylesheet" href="css/simplebar.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Blanchard художественная галерея</title>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="visually-hidden">Blanchard художественная галерея</h1>
+    <div class="header">
+      <nav class="header__nav">
+        <!-- бургер меню -->
+        <div class="header__nav-menu-burger" id="menu-burger__main" data-simplebar>
+          <button class="header__btn-closed" id="burger-menu__closed">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white" />
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white" />
+            </svg>
+          </button>
+
+          <ul class="header__menu-burger-list">
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#about"> О нас </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#gallery"> Галерея </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#cataloge"> Каталог </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#developments"> События </a> </li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#editions"> Издания </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#projects"> Проекты </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#contacts"> Контакты </a></li>
+
+            <!-- <li class="menu-burger-items"> <a class="js-sckroll-link" href="#contacts"> Контакты </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#contacts"> Контакты </a></li>
+            <li class="menu-burger-items"> <a class="js-sckroll-link" href="#contacts"> Контакты </a></li> -->
+
+
+          </ul>
+
+          <a href="#" class="header__btn-enter-lk">
+            <svg class="header__btn-enter-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                fill="white" />
+            </svg>Войти</a>
+
+        </div>
+        <!-- Это меню для мобильных версий и планшетных -->
+        <div class="header__nav-menu-mobile">
+          <button class="btn-menu-burger" id="burger-menu__open">
+            <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white" />
+              <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white" />
+              <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white" />
+            </svg>
+          </button>
+          <a href="#" class="logo-header" aria-label="Blanchard художественная галерея" id="header-logo">
+            <picture>
+              <source srcset="img/logo_320.svg" media="(min-width: 1px) and (max-width: 580px)">
+              <source srcset="img/logo_1024.svg" media="(max-width: 1024px)">
+              <img src="img/Лого.svg" alt="Blanchard художественная галерея" class="logo-img">
+            </picture>
+          </a>
+          <button class="btn btn-search-mobile-open" id="search__open">
+            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                fill="white" />
+            </svg>
+          </button>
+          <!-- форма появистя после нажатия на seacrh__open -->
+          <div class="header-search-wrapper-mobile">
+            <form class="header__search-form header__search-form-mobile">
+              <button type="submit" class="btn btn-search-mobile"> </button>
+              <input type="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту"
+                class="search-input-mobile ">
+              <button type="button" class="search-closed-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666885 15.3045L15.3336 0.000275917L16.0002 0.695923L1.33355 16.0002L0.666885 15.3045Z"
+                    fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                    fill="white" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="header-nav-main-menu">
+          <a href="#" class="logo-header" aria-label="Blanchard художественная галерея">
+            <img src="img/Лого.svg" alt="Blanchard художественная галерея" class="logo-img">
+          </a>
+          <ul class="header-nav-main-menu__list" id="menu">
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#about"> О нас
+              </a></li>
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#gallery"> Галерея
+              </a></li>
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#cataloge"> Каталог
+              </a></li>
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#developments">
+                События </a></li>
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#editions"> Издания
+              </a></li>
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#projects"> Проекты
+              </a></li>
+            <li class="header-nav-main-menu__items"> <a class="js-sckroll-link" href="#contacts"> Контакты
+              </a></li>
+          </ul>
+
+          <a href="#" class="header-nav-main-menu__enter-link"><svg width="13" height="13" viewBox="0 0 13 13"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                fill="white" />
+            </svg> Войти</a>
+
+        </div>
+      </nav>
+
+      <div class="header-choise">
+        <div class="conteiner-choise main">
+          <ul class="main__list">
+            <li class="main__item">
+              <button class="main__item-btn" data-path="one_menu">
+                <strong class="main__item-heading">Реализм</strong>
+                <span class="main__item-icon"></span>
+              </button>
+              <div class="main__dropdown" data-target="one_menu">
+                <div class="main__dropdown-wrap" data-simplebar>
+                  <ul class="main__drop-list">
+                    <li class="main__dropdown-item"><a href="#"
+                        class="main__item-link main__item-tintoretto">Тинторрето</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-fridrih">Фридрих</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-leo">Леонардо</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-verroq">Верроккьо</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#"
+                        class="main__item-link main__item-tintoretto">Тинторрето</a></li>
+                    <li class="main__dropdown-item"><a href="#"
+                        class="main__item-link main__item-tintoretto">Тинторрето</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="main__item">
+              <button class="main__item-btn" data-path="two_menu">
+                <strong class="main__item-heading">Импрессионизм</strong>
+                <span class="main__item-icon"></span>
+              </button>
+              <div class="main__dropdown" data-target="two_menu">
+                <div class="main__dropdown-wrap" data-simplebar>
+                  <ul class="main__drop-list">
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-mone">Моне</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-sisley">Сислей</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-mane">Мане</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-renuar">Ренуар</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-renuar">Ренуар</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-renuar">Ренуар</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="main__item">
+              <button class="main__item-btn" data-path="three_menu">
+                <strong class="main__item-heading">Постимпрессионизм</strong>
+                <span class="main__item-icon"></span>
+              </button>
+              <div class="main__dropdown" data-target="three_menu">
+                <div class="main__dropdown-wrap" data-simplebar>
+                  <ul class="main__drop-list">
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-vangog">Ван Гог</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-sezan">Сезанн</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-gogen">Гоген</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-sera">Сёра</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-sera">Сёра</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-sera">Сёра</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="main__item">
+              <button class="main__item-btn" data-path="four_menu">
+                <strong class="main__item-heading">Авангард</strong>
+                <span class="main__item-icon"></span>
+              </button>
+              <div class="main__dropdown" data-target="four_menu">
+                <div class="main__dropdown-wrap" data-simplebar>
+                  <ul class="main__drop-list">
+                    <li class="main__dropdown-item"><a href="#"
+                        class="main__item-link main__item-kandinskiy">Кандинский</a></li>
+                    <li class="main__dropdown-item"><a href="#"
+                        class="main__item-link main__item-marinetti">Маринетти</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-malevich">Малевич</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-pikasso">Пикассо</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="main__item">
+              <button class="main__item-btn" data-path="five_menu">
+                <strong class="main__item-heading">Футуризм</strong>
+                <span class="main__item-icon"></span>
+              </button>
+              <div class="main__dropdown" data-target="five_menu">
+                <div class="main__dropdown-wrap" data-simplebar>
+                  <ul class="main__drop-list">
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-kappa">Карра</a></li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-pratella">Прателла</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-severini">Северини</a>
+                    </li>
+                    <li class="main__dropdown-item"><a href="#" class="main__item-link main__item-balla">Балла</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="header-search">
+            <form class="header-search__form">
+              <button type="submit" class="btn btn-search">
+                <img src="img/search_icon.svg" alt="Поиск по сайту" class="btn-search-icon">
+              </button>
+              <input type="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="header-content">
+        <h2 class="header-content__title"> Прикоснитесь к прекрасному</h2>
+        <p class="header-content__text"> Мы вынуждены отталкиваться от того, что реализация намеченных плановых
+          заданий создаёт предпосылки для новых предложений. </p>
+        <button class="btn btn-header" aria-label="Подписаться на рассылку"> Подписаться на рассылку
+          <span class="btn-focused"></span></button>
+      </div>
+    </div>
+  </header>
+  <section class="section-about" id="about">
+    <div class="conteiner section-about__conteiner">
+      <div class="section-about__content">
+        <h2 class="title section-about__title"> О нас </h2>
+        <p class="section-about__text">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+          Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+          внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+          исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+          учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+          действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+          быть разоблачены.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gallery" id="gallery">
+
+    <div class="conteiner section-gallery__conteiner">
+      <div class="conteiner-gallery-left">
+        <h2 class="title section-gallery__title"> Галерея </h2>
+        <p class="section-gallery__filter-text">Фильтр:</p>
+        <select id="choices" class="choices">
+          <option> Живопись</option>
+          <option> Рисунок</option>
+          <option> Скульптура</option>
+        </select>
+
+        <p class="section-gallery__left-text">Вам предоставляется 10 бесплатных скачиваний. Для увеличения
+          количества
+          скачиваний<a href="#menu" class="section-gallery__left-link">авторизуйтесь</a>, либо
+          воспользуйтесь
+          лицензией.
+        </p>
+      </div>
+
+      <div class="conteiner-gallery-right">
+        <div class="swiper swiper-wrapper-gallery">
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <button class="swiper-button-prev" aria-label="К предыдущему слайду"></button>
+          <button class="swiper-button-next" aria-label="К следующему слайду"></button>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-1">
+              <picture>
+                <source srcset="img/galary_1.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_1.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_1.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_1.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_1.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-2">
+              <picture>
+                <source srcset="img/galary_2.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_2.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_2.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_2.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_2.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-3">
+              <picture>
+                <source srcset="img/galary_3.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_3.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_3.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_3.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_3.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-4">
+              <picture>
+                <source srcset="img/galary_4.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_4.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_4.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_4.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_4.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-5">
+              <picture>
+                <source srcset="img/galary_5.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_5.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_5.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_5.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_5.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-6">
+              <picture>
+                <source srcset="img/galary_6.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_6.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_6.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_6.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_6.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-7">
+              <picture>
+                <source srcset="img/galary_7.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_7.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_7.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_7.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_7.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-8">
+              <picture>
+                <source srcset="img/galary_8.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_8.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_8.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_8.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_8.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-9">
+              <picture>
+                <source srcset="img/galary_9.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_9.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_9.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_9.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_9.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-10">
+              <picture>
+                <source srcset="img/galary_10.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_10.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_10.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_10.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_10.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-11">
+              <picture>
+                <source srcset="img/galary_11.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_11.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_11.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_11.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_11.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-12">
+              <picture>
+                <source srcset="img/galary_12.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_12.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_12.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_12.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_12.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-13">
+              <picture>
+                <source srcset="img/galary_13.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_13.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_13.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_13.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_13.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-14">
+              <picture>
+                <source srcset="img/galary_14.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_14.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_14.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_14.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_14.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-15">
+              <picture>
+                <source srcset="img/galary_15.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_15.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_15.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_15.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_15.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-16">
+              <picture>
+                <source srcset="img/galary_16.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_16.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_16.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_16.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_16.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-17">
+              <picture>
+                <source srcset="img/galary_17.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_17.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_17.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_17.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_17.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-18">
+              <picture>
+                <source srcset="img/galary_18.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_18.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_18.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_18.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_18.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-19">
+              <picture>
+                <source srcset="img/galary_19.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_19.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_19.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_19.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_19.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-20">
+              <picture>
+                <source srcset="img/galary_20.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_20.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_20.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_20.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_20.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-21">
+              <picture>
+                <source srcset="img/galary_21.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_21.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_21.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_21.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_21.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-22">
+              <picture>
+                <source srcset="img/galary_22.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_22.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_22.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_22.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_22.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-23">
+              <picture>
+                <source srcset="img/galary_23.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_23.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_23.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_23.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_23.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="swiper-slide wrapper-gallery-img" href="#" data-path="modal-gallery-24">
+              <picture>
+                <source srcset="img/galary_24.jpg" media="(min-width: 1920px)">
+                <source srcset="img/galary_1024/galary_1024_24.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                <source srcset="img/galary_768/galary_768_24.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                <source srcset="img/galary_320/galary_320_24.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                <img class="img-gallery" src="img/galary_24.jpg" alt="">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section-cataloge" id="cataloge">
+    <div class="conteiner cataloge">
+      <div class="section-cataloge__content">
+        <div class="section-cataloge__wrapper-title">
+          <h2 class="title section-cataloge__title"> Каталог</h2>
+          <div class="section-cataloge__launge-wrapper">
+            <!-- ДОДЕЛАТь что бы при клике поялалаьс ионка возможно нужен еще слой span Для этого -->
+            <a href="#" class="cataloge-icon-launge active-launge" data-target="one_launge">
+              <img src="img/icon_launge_1.png" alt="иконка флага" class="img-icon-launge" data-path="one_launge"
+                data-content="cataloge-main-one-launge">
+            </a>
+            <a href="#" class="cataloge-icon-launge" data-target="two_launge">
+              <img src="img/icon_launge_2.png" alt="иконка флага" class="img-icon-launge  " data-path="two_launge"
+                data-content="cataloge-main-two-launge">
+            </a>
+            <a href="#" class="cataloge-icon-launge" data-target="three_launge">
+              <img src="img/icon_launge_3.png" alt="иконка флага" class="img-icon-launge" data-path="three_launge"
+                data-content="cataloge-main-three-launge">
+            </a>
+            <a href="#" class="cataloge-icon-launge" data-target="four_launge">
+              <img src="img/icon_launge_4.png" alt="иконка флага" class="img-icon-launge" data-path="four_launge"
+                data-content="cataloge-main-four-launge">
+            </a>
+            <a href="#" class="cataloge-icon-launge" data-target="five_launge">
+              <img src="img/icon_launge_5.png" alt="иконка флага" class="img-icon-launge" data-path="five_launge"
+                data-content="cataloge-main-five-launge">
+            </a>
+          </div>
+
+        </div>
+        <div class="cataloge__content cataloge__content--active" data-target="cataloge-main-one-launge">
+          <p class="section-cataloge__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример
+            континентально-европейского
+            типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+            Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии
+            и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены
+            на независимые элементы.
+          </p>
+
+
+          <div class="cataloge-main">
+            <div class="cataloge-main__left active-cataloge-content " data-target="cataloge_1">
+              <picture>
+                <img src="img/cataloge_img_1.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Доменико Гирландайо</h3>
+              <p class="cataloge-main__left-data">2 июня 1448 &mdash; 11 января 1494.</p>
+              <p class="cataloge-main__left-text"> Один из ведущих флорентийских художников
+                Кватроченто,
+                основатель
+                художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава
+                художественной мастерской, где юный Микеланджело в течение года овладевал
+                профессиональными
+                навыками. Автор фресковых циклов, в которых выпукло, со всевозможными
+                подробностями
+                показана домашняя жизнь библейских персонажей (в их роли выступают знатные
+                граждане
+                Флоренции в костюмах того времени).</p>
+            </div>
+
+            <div class="cataloge-main__left " data-target="cataloge_2">
+              <picture>
+                <img src="img/catalog_no_img.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Что мы о нём знаем?</h3>
+              <p class="cataloge-text"> Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В галерею</a>
+            </div>
+
+            <div class="cataloge-main__left " data-target="cataloge_3">
+              <picture>
+                <img src="img/catalog_no_img.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Что мы о нём знаем?</h3>
+              <p class="cataloge-text"> Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В галерею</a>
+            </div>
+
+            <div class="cataloge-main__left " data-target="cataloge_4">
+              <picture>
+                <img src="img/catalog_no_img.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Что мы о нём знаем?</h3>
+              <p class="cataloge-text"> Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В галерею</a>
+            </div>
+
+            <div class="cataloge-main__left " data-target="cataloge_5">
+              <picture>
+                <img src="img/catalog_no_img.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Что мы о нём знаем?</h3>
+              <p class="cataloge-text"> Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В галерею</a>
+            </div>
+
+            <div class="cataloge-main__left " data-target="cataloge_6">
+              <picture>
+                <img src="img/catalog_no_img.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Что мы о нём знаем?</h3>
+              <p class="cataloge-text"> Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В галерею</a>
+            </div>
+
+            <div class="cataloge-main__left " data-target="cataloge_7">
+              <picture>
+                <img src="img/catalog_no_img.jpg" alt="Картина_1" class="img-cataloge">
+              </picture>
+              <h3 class="cataloge-main__left-title">Что мы о нём знаем?</h3>
+              <p class="cataloge-text"> Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В галерею</a>
+            </div>
+
+
+            <div class="cataloge-main__right">
+
+              <ul id="accordion" class="cataloge-accordion ">
+                <li class="cataloge-accordion-items">
+                  <h3> <span class="cataloge-accordion__title"> C 1400 по 1499
+                      гг.</span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+
+                    <ul class="cataloge-accordion__list">
+
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Бенедетто
+                          ди
+                          Биндо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_1">
+                          Бергоньоне,
+                          Амброджо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Биссоло,
+                          Франческо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Больтраффио,
+                          Джованни</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Бонсиньори,
+                          Франческо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Боттичини,
+                          Рафаэлло</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Брамантино</a>
+                      </li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Бреа,
+                          Людовико</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Бьяджо
+                          д’Антонио Туччи</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Веккьетта</a>
+                      </li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Андреа
+                          Верроккьо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Доменико
+                          Гирландайо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Беноццо
+                          Гоццоли</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Граначчи,
+                          Франческо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Грегорио
+                          ди
+                          Чекко</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Джованни
+                          да
+                          Удине</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Джованни
+                          ди
+                          Паоло</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Джорджоне</a>
+                      </li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Парентино,
+                          Бернардо</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Пезеллино</a>
+                      </li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Пьетро
+                          Перуджино</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Перуцци,
+                          Бальдассаре</a></li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Пизанелло</a>
+                      </li>
+                      <li class="cataloge-accordion__li-items"> <a href="#" class="cataloge-accordion__li-items-link"
+                          data-path="cataloge_2">
+                          Пинтуриккьо</a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </li>
+
+                <li class="cataloge-accordion-items">
+                  <h3> <span class="cataloge-accordion__title" data-path="cataloge_2"> C 1500 по 1599
+                      гг.</span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+
+                    <div class="accordion-wrapper-content">
+                      <span class="accordion-wrapper-content__no-img"></span>
+                      <div class="accordion-wrapper-content__no-text">
+                        <h4 class="accordion-wrapper-content__title">Здесь пока пусто</h4>
+                        <p class="accordion-wrapper-content__text">
+                          А в галерее вы всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В
+                          галерею</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+                <li class="cataloge-accordion-items">
+                  <h3 data-path="cataloge_3"> <span class="cataloge-accordion__title" data-path="cataloge_3">
+                      C
+                      1600
+                      по 1699 гг.
+
+                    </span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+                    <div class="accordion-wrapper-content">
+                      <span class="accordion-wrapper-content__no-img"></span>
+                      <div class="accordion-wrapper-content__no-text">
+                        <h4 class="accordion-wrapper-content__title">Здесь пока пусто</h4>
+                        <p class="accordion-wrapper-content__text">
+                          А в галерее вы всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В
+                          галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cataloge-accordion-items">
+                  <h3 data-path="cataloge_4"> <span class="cataloge-accordion__title" data-path="cataloge_4">
+                      C
+                      1700
+                      по 1799 гг.
+
+                    </span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+                    <div class="accordion-wrapper-content">
+                      <span class="accordion-wrapper-content__no-img"></span>
+                      <div class="accordion-wrapper-content__no-text">
+                        <h4 class="accordion-wrapper-content__title">Здесь пока пусто</h4>
+                        <p class="accordion-wrapper-content__text">
+                          А в галерее вы всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В
+                          галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cataloge-accordion-items">
+                  <h3 data-path="cataloge_5"> <span class="cataloge-accordion__title" data-path="cataloge_5">
+                      C
+                      1800
+                      по 1899 гг.
+
+                    </span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+                    <div class="accordion-wrapper-content">
+                      <span class="accordion-wrapper-content__no-img"></span>
+                      <div class="accordion-wrapper-content__no-text">
+                        <h4 class="accordion-wrapper-content__title">Здесь пока пусто</h4>
+                        <p class="accordion-wrapper-content__text">
+                          А в галерее вы всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В
+                          галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cataloge-accordion-items">
+                  <h3 data-path="cataloge_6"> <span class="cataloge-accordion__title" data-path="cataloge_6">
+                      C
+                      1900
+                      по 1999 гг.
+
+                    </span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+
+                    <div class="accordion-wrapper-content">
+                      <span class="accordion-wrapper-content__no-img"></span>
+                      <div class="accordion-wrapper-content__no-text">
+                        <h4 class="accordion-wrapper-content__title">Здесь пока пусто</h4>
+                        <p class="accordion-wrapper-content__text">
+                          А в галерее вы всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В
+                          галерею</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+                <li class="cataloge-accordion-items">
+                  <h3 data-path="cataloge_7"> <span class="cataloge-accordion__title" data-path="cataloge_7">C
+                      2000 г.
+
+                    </span> <span class="cataloge-accordion-closed-icon"></span></h3>
+                  <div>
+
+                    <div class="accordion-wrapper-content">
+                      <span class="accordion-wrapper-content__no-img"></span>
+                      <div class="accordion-wrapper-content__no-text">
+                        <h4 class="accordion-wrapper-content__title">Здесь пока пусто</h4>
+                        <p class="accordion-wrapper-content__text">
+                          А в галерее вы всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="cataloge-main__left-link js-sckroll-link"> В
+                          галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cataloge__content" data-target="cataloge-main-two-launge">Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Dignissimos nemo dolorum exercitationem at sint repellat, quia
+          reiciendis illo sit temporibus eos, eaque autem tempora, nisi in? Voluptatum odio asperiores ab.
+        </div>
+        <div class="cataloge__content" data-target="cataloge-main-three-launge">Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Temporibus, animi et, doloremque corrupti sint deleniti assumenda
+          ratione blanditiis libero amet facilis hic provident dignissimos qui sequi totam nemo? Aliquam,
+          amet.
+          Odit temporibus cupiditate saepe illum reiciendis vel suscipit veritatis ducimus rem, at deserunt,
+          voluptatem laborum earum, tempore pariatur dolore alias iure unde doloremque voluptas debitis labore
+          facilis? Sunt, officia necessitatibus.</div>
+        <div class="cataloge__content" data-target="cataloge-main-four-launge">Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Aut eveniet unde quos eius consectetur aliquam qui saepe maiores.
+          Libero nobis magnam odit cumque illum voluptas corrupti quasi iste placeat recusandae!
+          Labore voluptates unde maiores, nulla vel, non dolorum obcaecati temporibus laborum eligendi debitis
+          delectus incidunt facere laboriosam itaque ut. Adipisci architecto enim dolorem corrupti dolores
+          ipsum ex vero nihil autem.
+          Ut excepturi quas veritatis, voluptate facere ratione tenetur fugit, aliquid aspernatur repellat
+          recusandae amet? Maxime iusto dolore rem obcaecati ex, iste harum enim sed tempora ut, minima
+          voluptatem numquam expedita.</div>
+        <div class="cataloge__content" data-target="cataloge-main-five-launge">Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Similique quas eligendi rem dolorum praesentium voluptatem, labore
+          culpa explicabo ipsum sint ab expedita perferendis quidem et neque doloribus. Iure, doloribus eos.
+          Hic impedit blanditiis eos sequi vitae molestiae tempore illo quas nemo ea ullam ipsam eligendi
+          ratione distinctio explicabo magni numquam, inventore aspernatur ipsa? Consequuntur magni repellat,
+          placeat repudiandae sed dolorum.
+          Vitae laboriosam fugit quae quo ab quam magnam non veritatis sequi facere, saepe minima
+          exercitationem molestiae aliquid deserunt quos atque laborum porro voluptatem. Quidem maiores modi
+          obcaecati corporis in voluptas?
+          Amet laborum repudiandae unde totam id eligendi animi dolorem. Maiores aspernatur hic praesentium?
+          Quisquam natus officia possimus nesciunt molestiae molestias unde? Ratione mollitia architecto neque
+          cumque maiores, nemo minima beatae?</div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section-developments" id="developments">
+
+    <div class="conteiner section-developments__content">
+      <h2 class="title section-developments__title">События</h2>
+
+      <div class="developments-swiper-content">
+        <div class="slider dev-js-slider">
+          <div class="slides-wrap dev-js-slides-wrap">
+            <div class="cards ">
+              <div class="cards__wrapper">
+                <picture>
+                  <source srcset="img/dev_img_1.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/developments_1024/developments_1024_1.jpg"
+                    media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/developments_768/developments_768_1.jpg"
+                    media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/developments_320/developments_320_1.jpg"
+                    media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/dev_img_1.jpg" alt="" class="cards__img">
+                </picture>
+                <div class="cards__content">
+                  <div class="cards__text">
+                    <div class="cards__text-mini ">
+                      <span class="cards__text-mini-img"> Музей им. Щусева </span>
+                      <span class="cards__text-mini-img"> с 20 марта по 30 апреля</span>
+                    </div>
+                    <h3 class="cards__title">Книжная гравюра в живом восприятии</h3>
+                    <p class="cards__text-description"> Один из ведущих флорентийских художников
+                      Кватроченто,
+                      основатель
+                      художественной династии, которую продолжили его брат Давид и сын
+                      Ридольфо.
+                    </p>
+                  </div>
+                  <span class="cards__wrap-links"> <a href="#" class="cards__link"> Подробнее
+                    </a> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards ">
+              <div class="cards__wrapper">
+                <picture>
+                  <source srcset="img/dev_img_2.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/developments_1024/developments_1024_2.jpg"
+                    media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/developments_768/developments_768_2.jpg"
+                    media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/developments_320/developments_320_2.jpg"
+                    media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/dev_img_2.jpg" alt="" class="cards__img">
+                </picture>
+                <div class="cards__content">
+                  <div class="cards__text">
+                    <div class="cards__text-mini ">
+                      <span class="cards__text-mini-img"> ММОМА </span>
+                      <span class="cards__text-mini-img">24 марта 19:00</span>
+                    </div>
+                    <h3 class="cards__title">«Открытая дискуссия». Дмитрий Петров и Сергей
+                      Ильин.
+                    </h3>
+                    <p class="cards__text-description"> Высокий уровень вовлечения
+                      представителей
+                      целевой
+                      аудитории
+                      является четким доказательством простого факта.</p>
+                  </div>
+
+                  <span class="cards__wrap-links"> <a href="#" class="cards__link">
+                      Подробнее
+                    </a> </span>
+
+                </div>
+              </div>
+            </div>
+            <div class="cards ">
+              <div class="cards__wrapper">
+                <picture>
+                  <source srcset="img/dev_img_3.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/developments_1024/developments_1024_3.jpg"
+                    media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/developments_768/developments_768_3.jpg"
+                    media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/developments_320/developments_320_3.jpg"
+                    media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/dev_img_3.jpg" alt="" class="cards__img">
+                </picture>
+                <div class="cards__content">
+                  <div class="cards__text">
+                    <div class="cards__text-mini ">
+                      <span class="cards__text-mini-img"> Еврейский музей</span>
+                      <span class="cards__text-mini-img"> с 31 марта по 21 апреля</span>
+                    </div>
+                    <h3 class="cards__title">Выставка «Формация 2020»</h3>
+                    <p class="cards__text-description"> Идейные соображения высшего порядка,
+                      а&nbsp;также
+                      современная
+                      методология разработки играет важную роль в&nbsp;формировании
+                      глубокомысленных
+                      рассуждений.
+                    </p>
+                  </div>
+                  <span class="cards__wrap-links"> <a href="#" class="cards__link">
+                      Подробнее
+                    </a> </span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="cards ">
+              <div class="cards__wrapper">
+                <picture>
+                  <source srcset="img/dev_img_4.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/developments_1024/developments_1024_4.jpg"
+                    media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/developments_768/developments_768_4.jpg"
+                    media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/developments_320/developments_320_4.jpg"
+                    media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/dev_img_4.jpg" alt="" class="cards__img">
+                </picture>
+                <div class="cards__content">
+                  <div class="cards__text">
+                    <div class="cards__text-mini ">
+                      <span class="cards__text-mini-img"> Третьяковка на Крымском валу </span>
+                      <span class="cards__text-mini-img"> с 30 марта по 30 апреля</span>
+                    </div>
+                    <h3 class="cards__title">XXIV Международная биеннале молодого искусства</h3>
+                    <p class="cards__text-description"> Внезапно, реплицированные
+                      с&nbsp;зарубежных
+                      источников,
+                      современные исследования.</p>
+                  </div>
+                  <span class="cards__wrap-links"> <a href="#" class="cards__link">
+                      Подробнее
+                    </a> </span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="cards__wrapper">
+                <picture>
+                  <source srcset="img/dev_img_5.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/developments_1024/developments_1024_5.jpg"
+                    media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/developments_768/developments_768_5.jpg"
+                    media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/developments_320/developments_320_5.jpg"
+                    media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/dev_img_5.jpg" alt="" class="cards__img">
+                </picture>
+                <div class="cards__content">
+                  <div class="cards__text">
+                    <div class="cards__text-mini ">
+                      <span class="cards__text-mini-img"> ММАМ </span>
+                      <span class="cards__text-mini-img"> с 8 апреля по 20 мая</span>
+                    </div>
+                    <h3 class="cards__title">Джон Винзор. Фотографии из&nbsp;серии
+                      &laquo;Метафора
+                      серебра&raquo;</h3>
+                    <p class="cards__text-description"> Один из&nbsp;ведущих флорентийских
+                      художников
+                      Кватроченто,
+                      основатель художественной династии, которую продолжили его брат Давид и
+                      сын&nbsp;Ридольфо.
+                    </p>
+                  </div>
+                  <span class="cards__wrap-links">
+                    <a href="#" class="cards__link"> Подробнее </a> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards cards-last"> </div>
+          </div>
+        </div>
+        <button class="btn js-show" id="dev-btn--show-all">Все события</button>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+  <section class="section-editions" id="editions">
+    <div class="conteiner editions-wrapper">
+      <div class="conteiner-editions">
+        <div class="conteiner-editions__wrappers">
+          <div class="conteiner-editions__left editions">
+            <h3 class="title editions__title">Издания</h3>
+            <span class="heading-768">Категории</span>
+            <form action="/" method="post">
+              <div class="questions">
+
+                <button class="heading js-check-heading" type="button">Категории</button>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-one" checked>
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Бестселлеры</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-two">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Искусство</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-three">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Архитектура</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Дизайн</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-five">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Мода</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-six">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Детям</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-seven">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Художественная литература</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-eight">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Публицистика</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-nine">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Путеводители</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-ten">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Философия</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-eleven">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Учебная литература</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-wwelve">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Журналы и газеты</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+              </div>
+
+
+
+              <fieldset class="conteiner-editions__fieldset fieldset-editions">
+                <legend class="fieldset-editions__price"> Цена: </legend>
+                <div class="fieldset-editions__wrapper">
+                  <span class="fieldset-editions__text"> От </span>
+                  <label class="label-price">
+                    <input type="text" name="min_pirce" value="" class="min-price" placeholder="50" tabindex="0">
+                    <span></span>
+                  </label>
+                  <span class="fieldset-editions__text"> до </span>
+                  <label class="label-price">
+                    <input type="text" name="max_pirce" value="" class="min-price" placeholder="25 000" tabindex="0">
+                    <span></span>
+                  </label>
+                  <span class="fieldset-editions__text"> руб.</span>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="conteiner-editions__right">
+            <div class="conteiner-editions__swipper">
+              <div class="slider-wrap edit-js-slider-main">
+                <div class="slider edit-js-slider">
+                  <div class="slides-wrap edit-js-slides-wrap swiper-slide">
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_1.jpg">
+                          <img src="img/editions_items_img_1.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Искусство цвета</h4>
+                            <p class="editions-items-text">Иттен, Иоханнес </p>
+                          </div>
+                          <span class="editions-items-price"> 620 руб</span>
+                        </div>
+
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_2.jpg">
+                          <img src="img/editions_items_img_2.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Типографика</h4>
+                            <p class="editions-items-text">Рудер, Эмиль </p>
+                          </div>
+                          <span class="editions-items-price"> 2 450 руб</span>
+                        </div>
+
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_3.jpg">
+                          <img src="img/editions_items_img_3.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Книга про буквы</h4>
+                            <p class="editions-items-text">Гордон, Юрий </p>
+                          </div>
+                          <span class="editions-items-price"> 2 200 руб</span>
+                        </div>
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_4.jpg">
+                          <img src="img/editions_items_img_4.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Николай Ильин</h4>
+                            <p class="editions-items-text">Кричевский, Владимир </p>
+                          </div>
+                          <span class="editions-items-price"> 1 100 руб</span>
+                        </div>
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_5.jpg">
+                          <img src="img/editions_items_img_5.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Модульные сетки в граф...</h4>
+                            <p class="editions-items-text">Мюллер-Брокманн, Йозеф </p>
+                          </div>
+                          <span class="editions-items-price"> 1 450 руб</span>
+                        </div>
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_6.jpg">
+                          <img src="img/editions_items_img_6.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Эволюция графических ст...</h4>
+                            <p class="editions-items-text">Хеллер, Чваст </p>
+                          </div>
+                          <span class="editions-items-price"> 3 200 руб</span>
+                        </div>
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="edit-slide">
+                      <div class="swiper-slide__wrapper-edit">
+                        <picture>
+                          <source media="(min-width: 1920px)" srcset="img/editions_items_img_7.jpg">
+                          <img src="img/editions_items_img_7.jpg" alt="" class="swiper-slide__editions-imgs">
+                        </picture>
+                        <div class="editions-items-wrapp">
+                          <div class="editions-items-wrapp-descript">
+                            <h4 class="editions-items-title">Искусство и визуальное в...
+                            </h4>
+                            <p class="editions-items-text"> Арнхейм, Рудольф </p>
+                          </div>
+                          <span class="editions-items-price"> 2 200 руб</span>
+                        </div>
+
+                        <button class="btn btn-editions">Заказать</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section-projects" id="projects">
+    <div class="conteiner conteiner_project">
+      <h2 class="title project-title" style="font-style: italic;"> Проекты</h2>
+      <p class="project-text">
+        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности
+        однозначно
+        фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства
+        смешаны
+        с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает
+        их статус бесполезности. Прежде всего, постоянное информационно пропагандистское<button
+          class="btn-tooltip js-tooltip"
+          data-tippy-content="Пример современных тенденций&nbsp;-современная&nbsp;методология&nbsp;разработки&nbsp;"></button>&nbsp;
+        обеспечение нашей
+        деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
+        И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+        <button
+          class="btn-tooltip js-tooltip"
+          data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"></button>&nbsp;
+        исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых<button class="btn-tooltip js-tooltip"
+          data-tippy-content="В стремлении повысить качество"></button>&nbsp; предпосылок. Банальные,
+        но&nbsp;неопровержимые
+        выводы,
+        а также представители современных социальных резервов призывают нас к новым свершениям,
+        которые,
+        в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной
+        неузнаваемости. Подробнее: <a href="#about" class="project-link">blanchard-art.ru/projects/about</a>
+      </p>
+
+      <h3 class="progect-slider-title">Партнёры проектов: </h3>
+      <div class="project-content-swipper-position">
+        <div class="project-content-swipper">
+          <div class="swiper-project">
+            <!-- If we need navigation buttons -->
+            <button class="swiper-button-prev-project"> </button>
+            <button class="swiper-button-next-project"></button>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_9.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_1.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_1.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_1.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_9.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_2.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_2.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_2.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_2.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_2.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_3.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_3.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_3.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_3.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_3.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_4.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_4.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_4.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_4.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_4.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_5.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_5.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_5.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_5.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_5.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_6.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_6.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_6.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_6.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_6.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_7.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_7.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_7.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_7.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_7.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_8.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_8.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_8.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_8.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_8.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+              <a href="#" class="swiper-slide card-project">
+                <picture>
+                  <source srcset="img/project_img_1.jpg" media="(min-width: 1920px)">
+                  <source srcset="img/projects_1024/projects_1024_9.jpg" media="(min-width: 1024px) and (max-width: 1919px)">
+                  <source srcset="img/projects_768/projects_768_9.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                  <source srcset="img/projects_320/projects_320_9.jpg" media="(min-width: 320px) and (max-width: 767px)">
+                  <img src="img/project_img_1.jpg" alt="" class="card-project-img">
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-contacts" id="contacts">
+    <div class="conteiner conteiner-contacts">
+      <h2 class="title contacts-title"> Контакты</h2>
+
+      <div class="contacts-wrapper">
+        <div class="contacts-wrapper__left contacts">
+          <h3 class="contacts__title-left" id="modify-text"> Шоурум №4</h3>
+          <address>
+            <p class="contacts__text-left"> Леонтьевский переулок, дом 5/1</p>
+          </address>
+          <div id="map__mobily" class="yandex-map-mobily"></div>
+
+          <form action="mail.php" method="POST" class="form-order">
+
+            <fieldset class="contacts__fieldset">
+
+              <legend class="contacts__title-legend"> Заказать обратный звонок </legend>
+
+              <div class="contacts__input-name">
+                <input name="user_name" type="text" placeholder="Имя*" data-validate-field="name">
+              </div>
+
+              <div class="contacts__input-tel">
+                <input name="user_phone" type="tel" placeholder="Телефон*" data-validate-field="tel"
+                  data-validate-rules="phone">
+              </div>
+
+
+            </fieldset>
+            <button type="submit" class="btn btn-order">Заказать <span></span></button>
+          </form>
+
+
+          <h4 class="contacts__title-order"> Связаться в один клик</h4>
+          <div class="contacts__wrapper-icons">
+            <a href="#" class="contacts__links-icons">
+              <picture>
+                <source srcset="img/Whatsapp-Icon_320.svg" media="(min-width: 320px) and (max-width: 767px)">
+                <source srcset="img/Whatsapp_icon_1024.svg" media="(max-width: 1024px)">
+                <img src="img/Whatsapp-Icon.png" alt="вапцап иконка" class="contacts__link-order-img">
+              </picture>
+            </a>
+
+            <a href="#" class="contacts__links-icons">
+              <picture>
+                <source srcset="img/Telegram_320.svg" media="(min-width: 320px) and (max-width: 767px)">
+                <source srcset="img/Telegram_1024.svg" media="(max-width: 1024px)">
+                <img src="img/telegram.png" alt="телеграм иконка" class="contacts__link-order-img">
+              </picture>
+            </a>
+
+
+          </div>
+
+        </div>
+        <div class="contacts-wrapper__right ">
+          <div id="map" class="yandex-map"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="conteiner footer-conteiner">
+      <div class="footer__content">
+
+        <a href="#" class="logo-header" aria-label="Blanchard художественная галерея">
+          <picture>
+            <source srcset="img/logo_320.svg" media="(min-width: 1px) and (max-width: 767px)">
+            <img src="img/Лого.svg" alt="Blanchard художественная галерея" class="logo-img footer__logo-img">
+          </picture>
+        </a>
+        <span class="footer__icons">
+          <a href="#">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z"
+                fill="#CACACA" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.1172 22.5C18.1172 24.8785 20.0453 26.8066 22.4238 26.8066C24.8024 26.8066 26.7305 24.8785 26.7305 22.5C26.7305 20.1215 24.8024 18.1934 22.4238 18.1934C20.0453 18.1934 18.1172 20.1215 18.1172 22.5Z"
+                fill="#CACACA" />
+              <path
+                d="M12.3521 14.8803C12.5591 14.3194 12.8894 13.8116 13.3185 13.3948C13.7353 12.9656 14.2428 12.6354 14.8041 12.4283C15.2593 12.2515 15.9432 12.0411 17.2029 11.9837C18.5655 11.9216 18.9741 11.9082 22.4238 11.9082C25.8738 11.9082 26.2824 11.9212 27.6447 11.9834C28.9044 12.0411 29.5886 12.2515 30.0435 12.4283C30.6048 12.6354 31.1126 12.9656 31.5291 13.3948C31.9582 13.8116 32.2885 14.319 32.4959 14.8803C32.6727 15.3356 32.8831 16.0198 32.9405 17.2795C33.0026 18.6418 33.016 19.0503 33.016 22.5004C33.016 25.9501 33.0026 26.3587 32.9405 27.7213C32.8831 28.981 32.6727 29.6649 32.4959 30.1201C32.2885 30.6814 31.9586 31.1889 31.5294 31.6057C31.1126 32.0348 30.6052 32.3651 30.0438 32.5721C29.5886 32.7493 28.9044 32.9597 27.6447 33.0171C26.2824 33.0792 25.8742 33.0922 22.4241 33.0922C18.9737 33.0922 18.5652 33.0792 17.2032 33.0171C15.9436 32.9597 15.2593 32.7493 14.8041 32.5721C13.6773 32.1375 12.7867 31.2469 12.3521 30.1201C12.1753 29.6649 11.9648 28.981 11.9071 27.7213C11.845 26.3587 11.8319 25.9501 11.8319 22.5004C11.8319 19.0503 11.845 18.6418 11.9071 17.2795C11.9645 16.0198 12.1749 15.3356 12.3521 14.8803ZM22.4238 29.1344C26.0881 29.1344 29.0585 26.1643 29.0585 22.5001C29.0585 18.8358 26.0881 15.8657 22.4238 15.8657C18.7599 15.8657 15.7894 18.8358 15.7894 22.5001C15.7894 26.1643 18.7599 29.1344 22.4238 29.1344ZM15.5271 17.1538C16.3834 17.1538 17.0776 16.4596 17.0776 15.6034C17.0776 14.7471 16.3834 14.0529 15.5271 14.0529C14.6709 14.0529 13.9767 14.7471 13.9767 15.6034C13.977 16.4596 14.6709 17.1538 15.5271 17.1538Z"
+                fill="#CACACA" />
+              <path
+                d="M22.6204 0C34.9364 0 44.9238 9.98747 44.9238 22.3034C44.9238 34.6194 34.9364 44.6069 22.6204 44.6069C10.3044 44.6069 0.316959 34.6194 0.316959 22.3034C0.316959 9.98747 10.3044 0 22.6204 0ZM9.89059 27.5836C9.95253 28.9469 10.1693 29.8777 10.4858 30.6924C11.1512 32.4127 12.5111 33.7727 14.2314 34.438C15.0458 34.7545 15.9769 34.971 17.3399 35.0332C18.7057 35.0955 19.1419 35.1105 22.6201 35.1105C26.0985 35.1105 26.5345 35.0955 27.9005 35.0332C29.2635 34.971 30.1946 34.7545 31.009 34.438C31.8639 34.1164 32.6378 33.6124 33.2776 32.9607C33.929 32.3212 34.433 31.547 34.7546 30.6924C35.0711 29.878 35.2879 28.9469 35.3498 27.5839C35.4128 26.2178 35.4274 25.7815 35.4274 22.3034C35.4274 18.8253 35.4128 18.389 35.3502 17.0233C35.2883 15.66 35.0718 14.7292 34.7553 13.9145C34.4337 13.0599 33.9293 12.2857 33.2776 11.6462C32.6382 10.9945 31.8639 10.4905 31.0094 10.1689C30.1946 9.85236 29.2638 9.63592 27.9005 9.57364C26.5348 9.51136 26.0985 9.49638 22.6204 9.49638C19.1423 9.49638 18.706 9.51136 17.3403 9.57398C15.9769 9.63592 15.0462 9.85236 14.2314 10.1685C13.3769 10.4901 12.6026 10.9945 11.9628 11.6462C11.3114 12.286 10.8071 13.0599 10.4858 13.9145C10.169 14.7292 9.95253 15.66 9.89025 17.0233C9.82798 18.389 9.81334 18.8253 9.81334 22.3034C9.81334 25.7815 9.82798 26.2178 9.89059 27.5836Z"
+                fill="#CACACA" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645 26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"
+                fill="#CACACA" />
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальные окна для галереи -->
+  <div class="modals">
+    <div class="modal-overlay">
+      <div class="modal" data-target="modal-gallery-1" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div>
+        <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-2" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <source srcset="img/gallery-modal-2_1024.jpg" media="(min-width: 581px) and (max-width: 1500px)">
+              <source srcset="img/gallery-modal-2_320.jpg" media="(max-width: 580px)">
+              <img src="img/gallery-modal-2.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Казимир Малевич</h2>
+            <h3 class="modal__rigth-descript"> “Женщина с граблями”</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Картина из второй серии крестьянского цикла работ Казимира
+              Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл
+              был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+          </div>
+        </div>
+        <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-3" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-4" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-5" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-6" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-7" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-8" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-9" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-10" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-11" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-12" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-13" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-14" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-15" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-16" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-17" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-18" data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-19 " data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-20 " data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-21 " data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-22 " data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-23 " data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+      <div class="modal" data-target="modal-gallery-24 " data-simplebar>
+        <div class="modal-wrap">
+          <div class="modal__left-content">
+            <picture>
+              <img src="img/catalog_no_img.jpg" alt="" class="modal__img">
+            </picture>
+          </div>
+          <div class="modal__right-content">
+            <h2 class="modal__rigth-title">Lorem ipsum dolor </h2>
+            <h3 class="modal__rigth-descript"> Lorem ipsum dolor sit amet.</h3>
+            <p class="modal__right-data">1931-1932</p>
+            <p class="modal__right-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eius, repudiandae iste necessitatibus perferendis voluptatum nostrum quod similique qui
+              quasi veniam fugiat aspernatur consequatur dolores est quibusdam sequi consequuntur
+              voluptatem?</p>
+          </div>
+        </div> <button class="model-closed"></button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/swiper-bundle.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/choices.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/simplebar.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/tippy-bundle.umd.min.js"></script>
+  <script src="js/checkbox.js"></script>
+  <script src="js/developments-swiper.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
