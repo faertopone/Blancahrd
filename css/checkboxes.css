@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.questions {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: -7px;
+}
+.heading-768,
+.heading {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px 40px 15px 0;
+  font-family: "Open-Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.heading-768{
+  display: none;
+}
+
+.checkbox-wrap {
+
+  margin-bottom: 13.5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.checkbox-wrap:hover {
+  color: #C283F3;
+}
+
+.checkbox-wrap:hover .visual-check {
+  border-color: #C283F3;
+}
+
+.visual-check {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.visual-check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #C283F3;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.checkbox:focus:not(:checked) ~ .checkbox-content .visual-check,
+.checkbox:checked ~ .checkbox-content .visual-check {
+  border-color: #C283F3;
+}
+
+.checkbox:focus:not(:checked) ~ .checkbox-content .check-text,
+.checkbox:checked ~ .checkbox-content .check-text {
+  color: #C283F3;
+}
+
+.checkbox:checked ~ .checkbox-content .visual-check::before {
+  opacity: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+
+@media (min-width: 581px) and (max-width: 1023px) {
+  .questions {
+    display: inline-block;
+    column-count: 3;
+    column-gap: 50px;
+    margin-bottom: 19px;
+  }
+  .heading-768{
+    display: block;
+    padding-bottom: 16px;
+  }
+
+  .heading{
+    display: none;
+  }
+
+.checkbox-wrap {
+  display: block;
+  max-width: 191px;
+  margin-right: 0;
+}
+
+
+}
+
+@media (max-width: 580px) {
+  .questions {
+    display: inline;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: -11px;
+    max-height: unset;
+  }
+
+  .heading-768{
+    display: none;
+  }
+
+
+  .heading {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 10px 40px 12px 0;
+  }
+
+
+  .heading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform: translateY(calc(-50% - 0.5px)) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  .heading.is-active::after {
+    transform: translateY(-50%) rotate(225deg);
+  }
+
+  .heading.is-active ~ .checkbox-wrap .checkbox-content,
+  .heading:not(.is-active)
+    ~ .checkbox-wrap
+    .checkbox:checked
+    ~ .checkbox-content {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+    opacity: 1;
+  }
+
+  .checkbox-wrap .checkbox-content {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0 solid transparent;
+    opacity: 0;
+    transition-property: min-height, opacity, padding, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  }
+
+  .checkbox:checked ~ .checkbox-content .close-icon {
+    opacity: 1;
+  }
+
+  .close-icon {
+    position: absolute;
+    right: 0px;
+    top: 13px;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+
+  .close-icon::before,
+  .close-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #C283F3;
+  }
+
+  .close-icon::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .close-icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+

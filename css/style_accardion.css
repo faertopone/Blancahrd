@@ -1,0 +1,187 @@
+.cataloge-accordion {
+  list-style: none;
+  padding: 0;
+  font-size: 0;
+}
+
+.cataloge-accordion-items:first-child {
+  border-top: 1px solid #CACACA;
+}
+
+.cataloge-accordion-items {
+  margin-top: -1px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #CACACA;
+  -webkit-transition: border-color .3s ease;
+  -o-transition: border-color .3s ease;
+  transition: border-color .3s ease;
+}
+
+.cataloge-accordion-items:first-child:hover,
+.cataloge-accordion-items:hover,
+.cataloge-accordion-items:focus-within {
+  border-color: #9D5CD0;
+}
+
+.cataloge-accordion-items:first-child:active,
+.cataloge-accordion-items:active{
+  border-color: #7943A4;
+}
+
+.section-faq__list_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+}
+
+.section-faq__list_text_title {
+  text-align: left;
+}
+
+.ui-widget-content {
+  border: 0;
+}
+
+.ui-accordion-content {
+  margin: 0;
+  font-family: 'Open-Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #333333;
+}
+
+.cataloge-accordion .ui-accordion-header {
+  cursor: pointer;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 0;
+  color: #333333;
+  background: white;
+  height: 114px;
+}
+
+.cataloge-accordion .ui-accordion-header:focus .cataloge-accordion__title{
+  color: white;
+  background-color: #9D5CD0;
+}
+
+.cataloge-accordion .ui-accordion-header:active .cataloge-accordion__title{
+  color: #7943A4;
+  background-color: white;
+}
+
+.cataloge-accordion .ui-state-active .cataloge-accordion-closed-icon{
+  background-color: #D1A9F0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border: 1px solid #9D5CD0;
+}
+
+.ui-state-hover, .ui-accordion-header, .cataloge-accordion-closed-icon  {
+  -webkit-transition-property: color, fill, -webkit-transform;
+  transition-property: color, fill, -webkit-transform;
+  -o-transition-property: color, fill, transform;
+  transition-property: color, fill, transform;
+  transition-property: color, fill, transform, -webkit-transform;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.cataloge-accordion .ui-state-active {
+  border-bottom: 1px solid #9D5CD0 ;
+  color: #9D5CD0;
+
+}
+
+.cataloge-accordion .ui-state-hover .cataloge-accordion-closed-icon{
+  background-color: #D1A9F0;
+  border: 1px solid #D1A9F0;
+}
+
+.cataloge-accordion .ui-state-hover {
+  color: #9D5CD0;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+
+.accordion-wrapper-content{
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Стили аккардиона в ИЗДАНИЕ */
+
+.conteiner-editions__left .js-accordion  {
+  border: 0;
+}
+
+.conteiner-editions__left .js-accordion-heading {
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+}
+
+.cataloge-accordion-items .ui-accordion-content {
+  margin-top: 0;
+  padding: 26px 0 25px 0;
+}
+
+@media (max-width: 580px) {
+  .conteiner-editions__left .js-accordion-heading {
+    height: 38px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cataloge-accordion .ui-accordion-header{
+    height: 72px;
+  }
+
+  .cataloge-accordion-items .ui-accordion-content {
+    padding: 20px 0 20px 0;
+  }
+}
+
+
+
+
